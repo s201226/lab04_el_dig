@@ -30,14 +30,25 @@ component Control is
 		en_c,en_s,en_l,resetn:out std_logic);
 end component;
 
-signal en_c,en_s,en_l,clk,resetn,start:std_logic;
+signal num00,to_ms,en_c,en_s,en_l,clk,resetn,start:std_logic;
 signal num:unsigned(15 downto 0);
 
 begin
 	clk<=clock_50;
-
-	count:SincCounter_nbit port map
+	
+	cont_ms:SincCounter_nbit port map
 		(enable=>en_c,
+		clk=>clk,
+		resetn=>resetn,
+		num=>num00);
+	
+	process(num00)
+	begin
+		if(num00=49999 and enable='1') then to_ms<='1'; else to_ms<='0'; end if;
+	end process;
+	
+	count:SincCounter_nbit port map
+		(enable=>to_ms,
 		clk=>clk,
 		resetn=>resetn,
 		num=>num);
