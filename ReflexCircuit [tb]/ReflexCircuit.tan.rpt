@@ -1,0 +1,537 @@
+Classic Timing Analyzer report for ReflexCircuit
+Wed Apr 13 02:14:10 2016
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clock_50'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                      ; To                                                        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.478 ns                         ; key[0]                                                    ; Control:cu|state.RESET                                    ; --         ; clock_50 ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.872 ns                         ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[2]                                                   ; clock_50   ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.209 ns                        ; key[0]                                                    ; Control:cu|state.START01                                  ; --         ; clock_50 ; 0            ;
+; Clock Setup: 'clock_50'      ; N/A   ; None          ; 386.55 MHz ( period = 2.587 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                           ;                                                           ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock_50        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock_50'                                                                                                                                                                                                                                                                    ;
++-------+------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                      ; To                                                        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 386.55 MHz ( period = 2.587 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.373 ns                ;
+; N/A   ; 411.02 MHz ( period = 2.433 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.219 ns                ;
+; N/A   ; 411.02 MHz ( period = 2.433 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.219 ns                ;
+; N/A   ; 411.02 MHz ( period = 2.433 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.219 ns                ;
+; N/A   ; 411.18 MHz ( period = 2.432 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.218 ns                ;
+; N/A   ; 411.69 MHz ( period = 2.429 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.215 ns                ;
+; N/A   ; 419.82 MHz ( period = 2.382 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 419.82 MHz ( period = 2.382 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 419.82 MHz ( period = 2.382 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; 419.99 MHz ( period = 2.381 ns )               ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.167 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.113 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.087 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.087 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.087 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.086 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 2.083 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 2.081 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.052 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.052 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.052 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.051 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.040 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.040 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.040 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.039 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.037 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.037 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.037 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.036 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.030 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.030 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.030 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.029 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 2.026 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 2.024 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.005 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 2.003 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 2.002 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.955 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.954 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.955 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.955 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.954 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.952 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.951 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.951 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.949 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.916 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.916 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.916 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.915 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.915 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.915 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.915 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.914 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.912 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.910 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.873 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.871 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.870 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.838 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.836 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.835 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.826 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.824 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.823 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.823 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.821 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.820 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.816 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.814 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.813 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.791 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.789 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.741 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.739 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.738 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.735 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.734 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.702 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.701 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.700 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.699 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.699 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.698 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.690 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.688 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.678 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.677 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.673 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.666 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.664 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.616 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.603 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.602 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.564 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.563 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.541 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.502 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.479 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.477 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.414 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.414 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.414 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.413 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.406 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.381 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.364 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.299 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.280 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.269 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.269 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.269 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.267 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.268 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.257 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.256 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.243 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.220 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.217 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 1.217 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.217 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.210 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.206 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.206 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.193 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.135 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 1.096 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.985 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; Control:cu|state.START01                                  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.977 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.904 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.899 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.892 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.882 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.881 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.877 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.873 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.872 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.844 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.841 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.693 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.START01                                  ; Control:cu|state.START01                                  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Control:cu|state.RESET                                    ; Control:cu|state.RESET                                    ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; clock_50   ; clock_50 ; None                        ; None                      ; 0.407 ns                ;
++-------+------------------------------------------------+-----------------------------------------------------------+-----------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------+
+; tsu                                                                              ;
++-------+--------------+------------+--------+--------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                       ; To Clock ;
++-------+--------------+------------+--------+--------------------------+----------+
+; N/A   ; None         ; 3.478 ns   ; key[0] ; Control:cu|state.RESET   ; clock_50 ;
+; N/A   ; None         ; 3.439 ns   ; key[0] ; Control:cu|state.START01 ; clock_50 ;
++-------+--------------+------------+--------+--------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                  ;
++-------+--------------+------------+-----------------------------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                      ; To      ; From Clock ;
++-------+--------------+------------+-----------------------------------------------------------+---------+------------+
+; N/A   ; None         ; 8.872 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[2] ; clock_50   ;
+; N/A   ; None         ; 8.734 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; hex3[6] ; clock_50   ;
+; N/A   ; None         ; 8.718 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; hex3[6] ; clock_50   ;
+; N/A   ; None         ; 8.708 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; hex3[0] ; clock_50   ;
+; N/A   ; None         ; 8.696 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; hex3[0] ; clock_50   ;
+; N/A   ; None         ; 8.646 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; hex1[2] ; clock_50   ;
+; N/A   ; None         ; 8.638 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; hex3[6] ; clock_50   ;
+; N/A   ; None         ; 8.633 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; hex3[0] ; clock_50   ;
+; N/A   ; None         ; 8.621 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; hex2[0] ; clock_50   ;
+; N/A   ; None         ; 8.591 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; hex0[2] ; clock_50   ;
+; N/A   ; None         ; 8.587 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; hex2[5] ; clock_50   ;
+; N/A   ; None         ; 8.560 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[0] ; clock_50   ;
+; N/A   ; None         ; 8.523 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; hex3[1] ; clock_50   ;
+; N/A   ; None         ; 8.519 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; hex2[1] ; clock_50   ;
+; N/A   ; None         ; 8.513 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; hex0[2] ; clock_50   ;
+; N/A   ; None         ; 8.501 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; hex1[2] ; clock_50   ;
+; N/A   ; None         ; 8.494 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; hex3[1] ; clock_50   ;
+; N/A   ; None         ; 8.491 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; hex3[4] ; clock_50   ;
+; N/A   ; None         ; 8.470 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; hex3[4] ; clock_50   ;
+; N/A   ; None         ; 8.442 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; hex3[2] ; clock_50   ;
+; N/A   ; None         ; 8.441 ns   ; Control:cu|state.RESET                                    ; hex1[2] ; clock_50   ;
+; N/A   ; None         ; 8.430 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; hex3[1] ; clock_50   ;
+; N/A   ; None         ; 8.414 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; hex0[3] ; clock_50   ;
+; N/A   ; None         ; 8.397 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; hex3[4] ; clock_50   ;
+; N/A   ; None         ; 8.388 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; hex3[2] ; clock_50   ;
+; N/A   ; None         ; 8.372 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[1] ; clock_50   ;
+; N/A   ; None         ; 8.368 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; hex1[2] ; clock_50   ;
+; N/A   ; None         ; 8.363 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; hex0[2] ; clock_50   ;
+; N/A   ; None         ; 8.362 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; hex2[6] ; clock_50   ;
+; N/A   ; None         ; 8.354 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[3] ; clock_50   ;
+; N/A   ; None         ; 8.351 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; hex1[0] ; clock_50   ;
+; N/A   ; None         ; 8.349 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; hex3[2] ; clock_50   ;
+; N/A   ; None         ; 8.340 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; hex0[3] ; clock_50   ;
+; N/A   ; None         ; 8.322 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; hex0[0] ; clock_50   ;
+; N/A   ; None         ; 8.287 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; hex0[4] ; clock_50   ;
+; N/A   ; None         ; 8.283 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; hex0[6] ; clock_50   ;
+; N/A   ; None         ; 8.278 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[6] ; clock_50   ;
+; N/A   ; None         ; 8.268 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; hex0[1] ; clock_50   ;
+; N/A   ; None         ; 8.248 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; hex0[0] ; clock_50   ;
+; N/A   ; None         ; 8.237 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[4] ; clock_50   ;
+; N/A   ; None         ; 8.219 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; hex3[6] ; clock_50   ;
+; N/A   ; None         ; 8.218 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; hex0[6] ; clock_50   ;
+; N/A   ; None         ; 8.218 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; hex3[3] ; clock_50   ;
+; N/A   ; None         ; 8.214 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q ; hex3[5] ; clock_50   ;
+; N/A   ; None         ; 8.213 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; hex3[0] ; clock_50   ;
+; N/A   ; None         ; 8.211 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; hex0[2] ; clock_50   ;
+; N/A   ; None         ; 8.210 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; hex0[4] ; clock_50   ;
+; N/A   ; None         ; 8.208 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; hex1[0] ; clock_50   ;
+; N/A   ; None         ; 8.201 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; hex0[1] ; clock_50   ;
+; N/A   ; None         ; 8.199 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; hex3[3] ; clock_50   ;
+; N/A   ; None         ; 8.198 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:12:gen03:T0|Q ; hex3[5] ; clock_50   ;
+; N/A   ; None         ; 8.189 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; hex0[3] ; clock_50   ;
+; N/A   ; None         ; 8.143 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; hex1[1] ; clock_50   ;
+; N/A   ; None         ; 8.127 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; hex0[0] ; clock_50   ;
+; N/A   ; None         ; 8.125 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; hex3[3] ; clock_50   ;
+; N/A   ; None         ; 8.120 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; hex1[3] ; clock_50   ;
+; N/A   ; None         ; 8.119 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:14:gen03:T0|Q ; hex3[5] ; clock_50   ;
+; N/A   ; None         ; 8.115 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; hex2[2] ; clock_50   ;
+; N/A   ; None         ; 8.112 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; hex2[0] ; clock_50   ;
+; N/A   ; None         ; 8.088 ns   ; Control:cu|state.RESET                                    ; hex2[5] ; clock_50   ;
+; N/A   ; None         ; 8.086 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; hex2[0] ; clock_50   ;
+; N/A   ; None         ; 8.085 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; hex2[3] ; clock_50   ;
+; N/A   ; None         ; 8.083 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; hex2[5] ; clock_50   ;
+; N/A   ; None         ; 8.081 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; hex0[4] ; clock_50   ;
+; N/A   ; None         ; 8.074 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; hex1[0] ; clock_50   ;
+; N/A   ; None         ; 8.069 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; hex1[6] ; clock_50   ;
+; N/A   ; None         ; 8.069 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:8:gen03:T0|Q  ; hex2[4] ; clock_50   ;
+; N/A   ; None         ; 8.059 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:1:gen02:T0|Q  ; hex0[5] ; clock_50   ;
+; N/A   ; None         ; 8.050 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; hex0[6] ; clock_50   ;
+; N/A   ; None         ; 8.047 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; hex1[4] ; clock_50   ;
+; N/A   ; None         ; 8.043 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; hex2[5] ; clock_50   ;
+; N/A   ; None         ; 8.041 ns   ; Control:cu|state.RESET                                    ; hex3[2] ; clock_50   ;
+; N/A   ; None         ; 8.039 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; hex0[1] ; clock_50   ;
+; N/A   ; None         ; 8.039 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; hex0[3] ; clock_50   ;
+; N/A   ; None         ; 8.014 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; hex2[1] ; clock_50   ;
+; N/A   ; None         ; 8.004 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q  ; hex1[5] ; clock_50   ;
+; N/A   ; None         ; 8.001 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; hex3[1] ; clock_50   ;
+; N/A   ; None         ; 7.999 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; hex1[1] ; clock_50   ;
+; N/A   ; None         ; 7.980 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; hex0[0] ; clock_50   ;
+; N/A   ; None         ; 7.976 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; hex1[3] ; clock_50   ;
+; N/A   ; None         ; 7.975 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; hex2[1] ; clock_50   ;
+; N/A   ; None         ; 7.971 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; hex3[4] ; clock_50   ;
+; N/A   ; None         ; 7.956 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:3:gen03:T0|Q  ; hex0[5] ; clock_50   ;
+; N/A   ; None         ; 7.945 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; hex0[4] ; clock_50   ;
+; N/A   ; None         ; 7.924 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; hex1[6] ; clock_50   ;
+; N/A   ; None         ; 7.919 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; hex3[2] ; clock_50   ;
+; N/A   ; None         ; 7.915 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; hex0[6] ; clock_50   ;
+; N/A   ; None         ; 7.904 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; hex1[4] ; clock_50   ;
+; N/A   ; None         ; 7.900 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; hex0[1] ; clock_50   ;
+; N/A   ; None         ; 7.870 ns   ; Control:cu|state.RESET                                    ; hex1[4] ; clock_50   ;
+; N/A   ; None         ; 7.868 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; hex1[1] ; clock_50   ;
+; N/A   ; None         ; 7.854 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; hex2[6] ; clock_50   ;
+; N/A   ; None         ; 7.843 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; hex1[3] ; clock_50   ;
+; N/A   ; None         ; 7.833 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; hex2[0] ; clock_50   ;
+; N/A   ; None         ; 7.832 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:2:gen03:T0|Q  ; hex0[5] ; clock_50   ;
+; N/A   ; None         ; 7.829 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:5:gen03:T0|Q  ; hex1[5] ; clock_50   ;
+; N/A   ; None         ; 7.827 ns   ; Control:cu|state.RESET                                    ; hex3[3] ; clock_50   ;
+; N/A   ; None         ; 7.826 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; hex2[6] ; clock_50   ;
+; N/A   ; None         ; 7.817 ns   ; Control:cu|state.RESET                                    ; hex3[5] ; clock_50   ;
+; N/A   ; None         ; 7.808 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; hex2[5] ; clock_50   ;
+; N/A   ; None         ; 7.792 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; hex1[6] ; clock_50   ;
+; N/A   ; None         ; 7.779 ns   ; Control:cu|state.RESET                                    ; hex3[6] ; clock_50   ;
+; N/A   ; None         ; 7.771 ns   ; Control:cu|state.RESET                                    ; hex3[0] ; clock_50   ;
+; N/A   ; None         ; 7.768 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; hex1[4] ; clock_50   ;
+; N/A   ; None         ; 7.767 ns   ; Control:cu|state.RESET                                    ; hex2[1] ; clock_50   ;
+; N/A   ; None         ; 7.738 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; hex2[1] ; clock_50   ;
+; N/A   ; None         ; 7.701 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; hex3[3] ; clock_50   ;
+; N/A   ; None         ; 7.700 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q ; hex3[5] ; clock_50   ;
+; N/A   ; None         ; 7.687 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:0:gen01:T0|Q  ; hex0[5] ; clock_50   ;
+; N/A   ; None         ; 7.683 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:4:gen03:T0|Q  ; hex1[5] ; clock_50   ;
+; N/A   ; None         ; 7.649 ns   ; Control:cu|state.RESET                                    ; hex1[5] ; clock_50   ;
+; N/A   ; None         ; 7.643 ns   ; Control:cu|state.RESET                                    ; hex2[0] ; clock_50   ;
+; N/A   ; None         ; 7.627 ns   ; Control:cu|state.RESET                                    ; hex2[3] ; clock_50   ;
+; N/A   ; None         ; 7.626 ns   ; Control:cu|state.RESET                                    ; hex2[2] ; clock_50   ;
+; N/A   ; None         ; 7.606 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; hex2[2] ; clock_50   ;
+; N/A   ; None         ; 7.603 ns   ; Control:cu|state.RESET                                    ; hex3[1] ; clock_50   ;
+; N/A   ; None         ; 7.600 ns   ; Control:cu|state.RESET                                    ; hex2[4] ; clock_50   ;
+; N/A   ; None         ; 7.580 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; hex2[6] ; clock_50   ;
+; N/A   ; None         ; 7.575 ns   ; Control:cu|state.RESET                                    ; hex1[0] ; clock_50   ;
+; N/A   ; None         ; 7.575 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; hex2[2] ; clock_50   ;
+; N/A   ; None         ; 7.575 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; hex2[3] ; clock_50   ;
+; N/A   ; None         ; 7.573 ns   ; Control:cu|state.RESET                                    ; hex3[4] ; clock_50   ;
+; N/A   ; None         ; 7.568 ns   ; Control:cu|state.RESET                                    ; hex0[6] ; clock_50   ;
+; N/A   ; None         ; 7.566 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:10:gen03:T0|Q ; hex2[4] ; clock_50   ;
+; N/A   ; None         ; 7.552 ns   ; Control:cu|state.RESET                                    ; hex0[1] ; clock_50   ;
+; N/A   ; None         ; 7.524 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; hex2[3] ; clock_50   ;
+; N/A   ; None         ; 7.522 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:6:gen03:T0|Q  ; hex1[5] ; clock_50   ;
+; N/A   ; None         ; 7.521 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:11:gen03:T0|Q ; hex2[4] ; clock_50   ;
+; N/A   ; None         ; 7.372 ns   ; Control:cu|state.RESET                                    ; hex2[6] ; clock_50   ;
+; N/A   ; None         ; 7.364 ns   ; Control:cu|state.RESET                                    ; hex1[1] ; clock_50   ;
+; N/A   ; None         ; 7.355 ns   ; Control:cu|state.RESET                                    ; hex1[3] ; clock_50   ;
+; N/A   ; None         ; 7.338 ns   ; Control:cu|state.RESET                                    ; hex0[5] ; clock_50   ;
+; N/A   ; None         ; 7.335 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; hex2[2] ; clock_50   ;
+; N/A   ; None         ; 7.332 ns   ; Control:cu|state.RESET                                    ; hex1[6] ; clock_50   ;
+; N/A   ; None         ; 7.304 ns   ; Control:cu|state.RESET                                    ; hex0[2] ; clock_50   ;
+; N/A   ; None         ; 7.290 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; hex2[3] ; clock_50   ;
+; N/A   ; None         ; 7.290 ns   ; SincCounter_nbit:count|T_flip_flop:\gen_add:9:gen03:T0|Q  ; hex2[4] ; clock_50   ;
+; N/A   ; None         ; 7.129 ns   ; Control:cu|state.RESET                                    ; hex0[3] ; clock_50   ;
+; N/A   ; None         ; 7.074 ns   ; Control:cu|state.RESET                                    ; hex0[4] ; clock_50   ;
+; N/A   ; None         ; 7.070 ns   ; Control:cu|state.RESET                                    ; hex0[0] ; clock_50   ;
++-------+--------------+------------+-----------------------------------------------------------+---------+------------+
+
+
++----------------------------------------------------------------------------------------+
+; th                                                                                     ;
++---------------+-------------+-----------+--------+--------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                       ; To Clock ;
++---------------+-------------+-----------+--------+--------------------------+----------+
+; N/A           ; None        ; -3.209 ns ; key[0] ; Control:cu|state.START01 ; clock_50 ;
+; N/A           ; None        ; -3.248 ns ; key[0] ; Control:cu|state.RESET   ; clock_50 ;
++---------------+-------------+-----------+--------+--------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Apr 13 02:14:10 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ReflexCircuit -c ReflexCircuit --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock_50" is an undefined clock
+Info: Clock "clock_50" has Internal fmax of 386.55 MHz between source register "SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q" and destination register "SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q" (period= 2.587 ns)
+    Info: + Longest register to register delay is 2.373 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X42_Y32_N11; Fanout = 10; REG Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q'
+        Info: 2: + IC(0.772 ns) + CELL(0.420 ns) = 1.192 ns; Loc. = LCCOMB_X38_Y32_N20; Fanout = 1; COMB Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q~0'
+        Info: 3: + IC(0.678 ns) + CELL(0.419 ns) = 2.289 ns; Loc. = LCCOMB_X42_Y32_N6; Fanout = 1; COMB Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q~1'
+        Info: 4: + IC(0.000 ns) + CELL(0.084 ns) = 2.373 ns; Loc. = LCFF_X42_Y32_N7; Fanout = 8; REG Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q'
+        Info: Total cell delay = 0.923 ns ( 38.90 % )
+        Info: Total interconnect delay = 1.450 ns ( 61.10 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clock_50" to destination register is 2.677 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock_50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 18; COMB Node = 'clock_50~clkctrl'
+            Info: 3: + IC(1.023 ns) + CELL(0.537 ns) = 2.677 ns; Loc. = LCFF_X42_Y32_N7; Fanout = 8; REG Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q'
+            Info: Total cell delay = 1.536 ns ( 57.38 % )
+            Info: Total interconnect delay = 1.141 ns ( 42.62 % )
+        Info: - Longest clock path from clock "clock_50" to source register is 2.677 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock_50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 18; COMB Node = 'clock_50~clkctrl'
+            Info: 3: + IC(1.023 ns) + CELL(0.537 ns) = 2.677 ns; Loc. = LCFF_X42_Y32_N11; Fanout = 10; REG Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q'
+            Info: Total cell delay = 1.536 ns ( 57.38 % )
+            Info: Total interconnect delay = 1.141 ns ( 42.62 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "Control:cu|state.RESET" (data pin = "key[0]", clock pin = "clock_50") is 3.478 ns
+    Info: + Longest pin to register delay is 6.191 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_H16; Fanout = 2; PIN Node = 'key[0]'
+        Info: 2: + IC(4.839 ns) + CELL(0.438 ns) = 6.107 ns; Loc. = LCCOMB_X43_Y32_N24; Fanout = 1; COMB Node = 'Control:cu|state.RESET~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 6.191 ns; Loc. = LCFF_X43_Y32_N25; Fanout = 34; REG Node = 'Control:cu|state.RESET'
+        Info: Total cell delay = 1.352 ns ( 21.84 % )
+        Info: Total interconnect delay = 4.839 ns ( 78.16 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clock_50" to destination register is 2.677 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock_50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 18; COMB Node = 'clock_50~clkctrl'
+        Info: 3: + IC(1.023 ns) + CELL(0.537 ns) = 2.677 ns; Loc. = LCFF_X43_Y32_N25; Fanout = 34; REG Node = 'Control:cu|state.RESET'
+        Info: Total cell delay = 1.536 ns ( 57.38 % )
+        Info: Total interconnect delay = 1.141 ns ( 42.62 % )
+Info: tco from clock "clock_50" to destination pin "hex1[2]" through register "SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q" is 8.872 ns
+    Info: + Longest clock path from clock "clock_50" to source register is 2.677 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock_50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 18; COMB Node = 'clock_50~clkctrl'
+        Info: 3: + IC(1.023 ns) + CELL(0.537 ns) = 2.677 ns; Loc. = LCFF_X42_Y32_N5; Fanout = 10; REG Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q'
+        Info: Total cell delay = 1.536 ns ( 57.38 % )
+        Info: Total interconnect delay = 1.141 ns ( 42.62 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.945 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X42_Y32_N5; Fanout = 10; REG Node = 'SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q'
+        Info: 2: + IC(0.851 ns) + CELL(0.437 ns) = 1.288 ns; Loc. = LCCOMB_X45_Y32_N28; Fanout = 1; COMB Node = 'ScreenDriverBCD:screen|decoder_7seg:\gen01:2:dec01|Mux2~0'
+        Info: 3: + IC(0.273 ns) + CELL(0.149 ns) = 1.710 ns; Loc. = LCCOMB_X45_Y32_N30; Fanout = 1; COMB Node = 'ScreenDriverBCD:screen|decoder_7seg:\gen01:2:dec01|Mux2~1'
+        Info: 4: + IC(1.563 ns) + CELL(2.672 ns) = 5.945 ns; Loc. = PIN_B24; Fanout = 0; PIN Node = 'hex1[2]'
+        Info: Total cell delay = 3.258 ns ( 54.80 % )
+        Info: Total interconnect delay = 2.687 ns ( 45.20 % )
+Info: th for register "Control:cu|state.START01" (data pin = "key[0]", clock pin = "clock_50") is -3.209 ns
+    Info: + Longest clock path from clock "clock_50" to destination register is 2.677 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock_50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 18; COMB Node = 'clock_50~clkctrl'
+        Info: 3: + IC(1.023 ns) + CELL(0.537 ns) = 2.677 ns; Loc. = LCFF_X43_Y32_N11; Fanout = 17; REG Node = 'Control:cu|state.START01'
+        Info: Total cell delay = 1.536 ns ( 57.38 % )
+        Info: Total interconnect delay = 1.141 ns ( 42.62 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 6.152 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_H16; Fanout = 2; PIN Node = 'key[0]'
+        Info: 2: + IC(4.840 ns) + CELL(0.398 ns) = 6.068 ns; Loc. = LCCOMB_X43_Y32_N10; Fanout = 1; COMB Node = 'Control:cu|Selector0~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 6.152 ns; Loc. = LCFF_X43_Y32_N11; Fanout = 17; REG Node = 'Control:cu|state.START01'
+        Info: Total cell delay = 1.312 ns ( 21.33 % )
+        Info: Total interconnect delay = 4.840 ns ( 78.67 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 205 megabytes
+    Info: Processing ended: Wed Apr 13 02:14:10 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

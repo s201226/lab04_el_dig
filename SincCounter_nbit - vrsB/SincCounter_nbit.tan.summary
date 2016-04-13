@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.543 ns
+From           : sw[1]
+To             : D_flip_flop:D0|Q[15]
+From Clock     : --
+To Clock       : key[0]
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.630 ns
+From           : D_flip_flop:D0|Q[3]
+To             : hex0[0]
+From Clock     : key[0]
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.184 ns
+From           : sw[1]
+To             : D_flip_flop:D0|Q[0]
+From Clock     : --
+To Clock       : key[0]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'key[0]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 378.93 MHz ( period = 2.639 ns )
+From           : D_flip_flop:D0|Q[0]
+To             : D_flip_flop:D0|Q[15]
+From Clock     : key[0]
+To Clock       : key[0]
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

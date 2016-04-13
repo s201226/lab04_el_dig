@@ -1,0 +1,9 @@
+
+State Machine - |ReflexCircuit|Control:cu|state
+Name state.RESULT state.COUNT02 state.START02 state.COUNT01 state.START01 state.RESET 
+state.RESET 0 0 0 0 0 0 
+state.START01 0 0 0 0 1 1 
+state.COUNT01 0 0 0 1 0 1 
+state.START02 0 0 1 0 0 1 
+state.COUNT02 0 1 0 0 0 1 
+state.RESULT 1 0 0 0 0 1 

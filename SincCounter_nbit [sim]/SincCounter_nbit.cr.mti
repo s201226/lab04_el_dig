@@ -1,0 +1,52 @@
+{D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit/decoder_7seg.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit/decoder_7seg.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity decoder_7seg
+-- Compiling architecture behavioral of decoder_7seg
+
+} {} {}} {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/coder_7seg.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/coder_7seg.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity coder_7seg
+-- Compiling architecture behavior of coder_7seg
+
+} {} {}} {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit/SincCounter_nbit.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit/SincCounter_nbit.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity sinccounter_nbit
+-- Compiling architecture behavioral of sinccounter_nbit
+
+} {} {}} {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/tester.vhd} {2 {vcom -work work -2002 -explicit {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/tester.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity tester
+-- Compiling architecture behavioral of tester
+** Warning: [4] D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/tester.vhd(28): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/tester.vhd(29): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/tester.vhd(30): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/tester.vhd(35): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+** Warning: [4] D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/tester.vhd(36): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+
+} {} {}} {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit/T_flip_flop.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit/T_flip_flop.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity t_flip_flop
+-- Compiling architecture behavioral of t_flip_flop
+
+} {} {}} {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/testbench.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/SincCounter_nbit [tb]/testbench.vhd}
+Model Technology ModelSim ALTERA vcom 6.5b Compiler 2009.10 Oct  1 2009
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity testbench
+-- Compiling architecture test of testbench
+
+} {} {}}

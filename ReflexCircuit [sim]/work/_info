@@ -1,0 +1,286 @@
+m255
+K3
+13
+cModel Technology
+dD:\Documenti\Politecnico\Laboratori\Eln Sist Dig\Lab04\SincCounter_nbit [sim]
+Ecoder_7seg
+Z0 w1459838176
+Z1 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 dD:\Documenti\Politecnico\Laboratori\Eln Sist Dig\Lab04\ReflexCircuit [sim]
+Z4 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit [tb]/coder_7seg.vhd
+Z5 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit [tb]/coder_7seg.vhd
+l0
+L5
+VjFJZn5?S_Im]i_2i>Qz6?0
+Z6 OV;C;6.5b;42
+32
+Z7 o-work work -2002 -explicit -O0
+Z8 tExplicit 1
+!s100 10f9z?cHa4REAFjQU5TdE0
+Abehavior
+R1
+R2
+DEx4 work 10 coder_7seg 0 22 jFJZn5?S_Im]i_2i>Qz6?0
+l12
+L11
+ViWG:EQ<S2ck5b:Y8H8NV80
+R6
+32
+Z9 Mx2 4 ieee 14 std_logic_1164
+Z10 Mx1 4 ieee 11 numeric_std
+R7
+R8
+!s100 h^LndLFCRX7j6_8n?GE?21
+Econtrol
+Z11 w1460502532
+R2
+R3
+Z12 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/Control.vhd
+Z13 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/Control.vhd
+l0
+L4
+Vnj]Y?5]NeD>RjhX83^?jE1
+R6
+32
+R7
+R8
+!s100 ;2FdI2NUZYMXlSeMgD[Jm3
+Abehavioral
+R2
+DEx4 work 7 control 0 22 nj]Y?5]NeD>RjhX83^?jE1
+l16
+L10
+VJNUIo_G;<jlZ3ZibYGE?S2
+R6
+32
+Z14 Mx1 4 ieee 14 std_logic_1164
+R7
+R8
+!s100 5A>akjJlVX2DlR48eWoM?1
+Edecoder_7seg
+Z15 w1460502228
+R1
+R2
+R3
+Z16 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/decoder_7seg.vhd
+Z17 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/decoder_7seg.vhd
+l0
+L5
+VH;k``<h_CZ@JbfKSS4K[60
+R6
+32
+R7
+R8
+!s100 zh[>G7]R6P`5]@[]zQoJH0
+Abehavioral
+R1
+R2
+DEx4 work 12 decoder_7seg 0 22 H;k``<h_CZ@JbfKSS4K[60
+l13
+L12
+V?e[`^=eP`:15LCZJPA:cQ0
+R6
+32
+R9
+R10
+R7
+R8
+!s100 3jGR:K5hMh5`AK?JLHKLG0
+Ereflexcircuit
+Z18 w1460506605
+R1
+R2
+R3
+Z19 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/ReflexCircuit.vhd
+Z20 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/ReflexCircuit.vhd
+l0
+L5
+VK@Q0IY=@:eY37N2:T;nf43
+R6
+32
+R7
+R8
+!s100 :Z]HcO[S96;bG<`HHOY7m0
+Abehavioral
+R1
+R2
+DEx4 work 13 reflexcircuit 0 22 K@Q0IY=@:eY37N2:T;nf43
+l36
+L14
+VH;XgCn6WOUVTb8UehkSE:3
+R6
+32
+R9
+R10
+R7
+R8
+!s100 =82H@<3[3oc[m:FPVkdHF2
+Escreendriverbcd
+Z21 w1460502531
+R1
+R2
+R3
+Z22 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/ScreenDriverBCD.vhd
+Z23 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/ScreenDriverBCD.vhd
+l0
+L5
+V?Y>o<A=lTaNIfXbOoz7QZ3
+R6
+32
+R7
+R8
+!s100 =9cBVOd^eM<nlPGOE3nN13
+Abehavioral
+R1
+R2
+DEx4 work 15 screendriverbcd 0 22 ?Y>o<A=lTaNIfXbOoz7QZ3
+l23
+L12
+VT:GR[iYOeZDmM9Fl5aUTj3
+R6
+32
+R9
+R10
+R7
+R8
+!s100 ^FiN:0;[?5RlHC=ag_UPc2
+Esinccounter_nbit
+Z24 w1460500538
+R1
+R2
+R3
+Z25 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/SincCounter_nbit.vhd
+Z26 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/SincCounter_nbit.vhd
+l0
+L5
+VQQc1_KS022XllV9TANDdA1
+R6
+32
+R7
+R8
+!s100 _mCdg1bi:dF4?z;NB1iof2
+Abehavioral
+R1
+R2
+DEx4 work 16 sinccounter_nbit 0 22 QQc1_KS022XllV9TANDdA1
+l22
+L11
+VVPYL]0lCU7TgLlF@D<gA73
+R6
+32
+R9
+R10
+R7
+R8
+!s100 _m[KPoS?BTzoigMA2BOGd0
+Esinccounterbcd_nbit
+Z27 w1460501366
+R1
+R2
+R3
+Z28 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/SincCounterBCD_nbit.vhd
+Z29 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/SincCounterBCD_nbit.vhd
+l0
+L5
+VL`ZzaWzLC02dU^o945F]@0
+R6
+32
+R7
+R8
+!s100 hcLd;eGom4Vmk[0L[=Kz_0
+Abehavioral
+R1
+R2
+DEx4 work 19 sinccounterbcd_nbit 0 22 L`ZzaWzLC02dU^o945F]@0
+l22
+L11
+VV]6_B=U_zk2OaX96k>B;T1
+R6
+32
+R9
+R10
+R7
+R8
+!s100 Kg0Ej^0anf[C7U0kJl46h0
+Et_flip_flop
+Z30 w1460494643
+R2
+R3
+Z31 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/T_flip_flop.vhd
+Z32 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit/T_flip_flop.vhd
+l0
+L4
+VT;BU<g16]BEGMeW=<c7<O1
+R6
+32
+R7
+R8
+!s100 z;UjQ8F`3o;KdTEfjC7TP3
+Abehavioral
+R2
+DEx4 work 11 t_flip_flop 0 22 T;BU<g16]BEGMeW=<c7<O1
+l11
+L10
+VoAA]5Z=_?lgN;d5BCFkA<2
+R6
+32
+R14
+R7
+R8
+!s100 a>L]@dQ=9e1Y9m0;AfP3l1
+Etestbench
+Z33 w1460504052
+R2
+R3
+Z34 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit [tb]/testbench.vhd
+Z35 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit [tb]/testbench.vhd
+l0
+L4
+VLKLzM[nGj7kz[LKUSeW4e0
+R6
+32
+R7
+R8
+!s100 U[XFPj;7eli0H^=W2JV<10
+Atest
+R2
+DEx4 work 9 testbench 0 22 LKLzM[nGj7kz[LKUSeW4e0
+l33
+L8
+V<DC6;eH3LEUARQCZF;CQ;0
+R6
+32
+R14
+R7
+R8
+!s100 @ELKge71]`jTzSGF]0ozJ1
+Etester
+Z36 w1460506915
+R1
+R2
+R3
+Z37 8D:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit [tb]/tester.vhd
+Z38 FD:/Documenti/Politecnico/Laboratori/Eln Sist Dig/Lab04/ReflexCircuit [tb]/tester.vhd
+l0
+L5
+V;UMJ:>kK>CD7@88akibVm1
+!s100 `0QD17DlkWifABISia<7K2
+R6
+32
+R7
+R8
+Abehavioral
+R1
+R2
+Z39 DEx4 work 6 tester 0 22 ;UMJ:>kK>CD7@88akibVm1
+l26
+L16
+VTUXVTBld58YDFBL8@cTPC1
+!s100 n=WGFCXXIK?JhBAzg[G]Z0
+R6
+32
+R9
+R10
+R7
+R8

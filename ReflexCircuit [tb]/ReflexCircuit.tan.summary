@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.478 ns
+From           : key[0]
+To             : Control:cu|state.RESET
+From Clock     : --
+To Clock       : clock_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.872 ns
+From           : SincCounter_nbit:count|T_flip_flop:\gen_add:7:gen03:T0|Q
+To             : hex1[2]
+From Clock     : clock_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -3.209 ns
+From           : key[0]
+To             : Control:cu|state.START01
+From Clock     : --
+To Clock       : clock_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock_50'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 386.55 MHz ( period = 2.587 ns )
+From           : SincCounter_nbit:count|T_flip_flop:\gen_add:13:gen03:T0|Q
+To             : SincCounter_nbit:count|T_flip_flop:\gen_add:15:gen03:T0|Q
+From Clock     : clock_50
+To Clock       : clock_50
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

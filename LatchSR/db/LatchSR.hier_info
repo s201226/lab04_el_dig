@@ -1,0 +1,8 @@
+|LatchSR
+Clk => R_g.IN0
+Clk => S_g.IN0
+S => S_g.IN1
+R => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

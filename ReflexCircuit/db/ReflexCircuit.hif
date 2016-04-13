@@ -1,0 +1,327 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SincCounterBCD_nbit
+# storage
+db|ReflexCircuit.(1).cnf
+db|ReflexCircuit.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sinccounterbcd_nbit.vhd
+86ae11288154646314124e56f09492
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+nbit
+16
+PARAMETER_SIGNED_DEC
+USR
+ constraint(num)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+SincCounterBCD_nbit:count
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+SincCounter_nbit
+# storage
+db|ReflexCircuit.(2).cnf
+db|ReflexCircuit.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sinccounter_nbit.vhd
+7ce8d67c9b940dee5c695b0948296c1
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+nbit
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(num)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:0:gen01:S1
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:1:gen02:S2
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:2:gen03:S3
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:3:gen03:S3
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+T_flip_flop
+# storage
+db|ReflexCircuit.(3).cnf
+db|ReflexCircuit.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+t_flip_flop.vhd
+a0322a8f9b63853c38e3a738dfb49697
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:0:gen01:S1|T_flip_flop:\gen_add:0:gen01:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:0:gen01:S1|T_flip_flop:\gen_add:1:gen02:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:0:gen01:S1|T_flip_flop:\gen_add:2:gen03:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:0:gen01:S1|T_flip_flop:\gen_add:3:gen03:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:1:gen02:S2|T_flip_flop:\gen_add:0:gen01:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:1:gen02:S2|T_flip_flop:\gen_add:1:gen02:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:1:gen02:S2|T_flip_flop:\gen_add:2:gen03:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:1:gen02:S2|T_flip_flop:\gen_add:3:gen03:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:2:gen03:S3|T_flip_flop:\gen_add:0:gen01:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:2:gen03:S3|T_flip_flop:\gen_add:1:gen02:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:2:gen03:S3|T_flip_flop:\gen_add:2:gen03:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:2:gen03:S3|T_flip_flop:\gen_add:3:gen03:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:3:gen03:S3|T_flip_flop:\gen_add:0:gen01:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:3:gen03:S3|T_flip_flop:\gen_add:1:gen02:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:3:gen03:S3|T_flip_flop:\gen_add:2:gen03:T0
+SincCounterBCD_nbit:count|SincCounter_nbit:\gen_add:3:gen03:S3|T_flip_flop:\gen_add:3:gen03:T0
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ReflexCircuit
+# storage
+db|ReflexCircuit.(0).cnf
+db|ReflexCircuit.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+reflexcircuit.vhd
+58a06f775a5c49ddb76588bea29404c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+decoder_7seg
+# storage
+db|ReflexCircuit.(5).cnf
+db|ReflexCircuit.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+decoder_7seg.vhd
+6b894b42f5d3d52dbab1323df5cd66
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(num)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(to_hex)
+0 to 6
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ScreenDriverBCD:screen|decoder_7seg:\gen01:1:dec01
+ScreenDriverBCD:screen|decoder_7seg:\gen01:2:dec01
+ScreenDriverBCD:screen|decoder_7seg:\gen01:3:dec01
+ScreenDriverBCD:screen|decoder_7seg:\gen01:4:dec01
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ScreenDriverBCD
+# storage
+db|ReflexCircuit.(4).cnf
+db|ReflexCircuit.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+screendriverbcd.vhd
+20d6ea37c551c3e0817e47441432bda7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(numbcd)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(hex3)
+0 to 6
+PARAMETER_STRING
+USR
+ constraint(hex2)
+0 to 6
+PARAMETER_STRING
+USR
+ constraint(hex1)
+0 to 6
+PARAMETER_STRING
+USR
+ constraint(hex0)
+0 to 6
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ScreenDriverBCD:screen
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Control
+# storage
+db|ReflexCircuit.(6).cnf
+db|ReflexCircuit.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+control.vhd
+aabfa98a65838030c53940985acef3aa
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+Control:cu
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+
